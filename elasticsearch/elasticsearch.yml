@@ -35,17 +35,6 @@ node.name: elastic01
 #
 # path.logs: /path/to/logs
 #
-# ----------------------------------- Memory -----------------------------------
-#
-# Lock the memory on startup:
-#
-bootstrap.mlockall: true
-#
-# Make sure that the `ES_HEAP_SIZE` environment variable is set to about half the memory
-# available on the system and that the owner of the process is allowed to use this limit.
-#
-# Elasticsearch performs poorly when the system is swapping the memory.
-#
 # ---------------------------------- Network -----------------------------------
 #
 # Set the bind address to a specific IP (IPv4 or IPv6):
