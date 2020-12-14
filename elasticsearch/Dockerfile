@@ -8,3 +8,4 @@ RUN    ./bin/elasticsearch-plugin install analysis-icu \
 
 COPY elasticsearch.yml /usr/share/elasticsearch/config
 COPY jvm.options /usr/share/elasticsearch/config
+COPY limits.conf /etc/security
