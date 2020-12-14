@@ -6,23 +6,23 @@ ENV	LIFERAY_HOME /opt/liferay
 ENV TOMCAT_HOME $LIFERAY_HOME/tomcat
 
 # Add Liferay license (with permissions to liferay user)
-COPY --chown=liferay:liferay deploy/activation-key-digitalenterprisedevelopment-7.3-liferaycom.xml $LIFERAY_HOME/deploy
+COPY deploy/activation-key-digitalenterprisedevelopment-7.3-liferaycom.xml $LIFERAY_HOME/deploy
 RUN chown -R liferay:liferay deploy/activation-key-digitalenterprisedevelopment-7.3-liferaycom.xml $LIFERAY_HOME/deploy
 
 # Add OSGi configs (with permissions to liferay user)
-#COPY --chown=liferay:liferay osgi/configs/* $LIFERAY_HOME/osgi/configs
+#COPY osgi/configs/* $LIFERAY_HOME/osgi/configs
 #RUN chown -R liferay:liferay $LIFERAY_HOME/osgi/configs/*
 
 # Configure database conection (with permissions to liferay user)
-COPY --chown=liferay:liferay tomcat/conf/Catalina/localhost/* $TOMCAT_HOME/conf/Catalina/localhost/
+COPY tomcat/conf/Catalina/localhost/* $TOMCAT_HOME/conf/Catalina/localhost/
 RUN chown -R liferay:liferay $TOMCAT_HOME/conf/Catalina/localhost/*
 
 # Add database libs (mysql and oracle) (with permissions to liferay user)
-COPY --chown=liferay:liferay tomcat/lib/ext/* $TOMCAT_HOME/lib/ext/
+COPY tomcat/lib/ext/* $TOMCAT_HOME/lib/ext/
 RUN chown -R liferay:liferay $TOMCAT_HOME/lib/ext/*
 
 # Configure Liferay (with permissions to liferay user)
-COPY --chown=liferay:liferay properties/* $LIFERAY_HOME/
+COPY properties/* $LIFERAY_HOME/
 RUN chown -R liferay:liferay $LIFERAY_HOME/*
 
 USER liferay
