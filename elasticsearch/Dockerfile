@@ -6,6 +6,6 @@ RUN    ./bin/elasticsearch-plugin install analysis-icu \
     && ./bin/elasticsearch-plugin install analysis-smartcn \
     && ./bin/elasticsearch-plugin install analysis-stempel
 
-COPY elasticsearch.yml /usr/share/elasticsearch/config
-COPY jvm.options /usr/share/elasticsearch/config
-COPY limits.conf /etc/security
+COPY --chown=elasticsearch:elasticsearch elasticsearch.yml /usr/share/elasticsearch/config
+COPY --chown=elasticsearch:elasticsearch jvm.options /usr/share/elasticsearch/config
+COPY --chown=elasticsearch:elasticsearch limits.conf /etc/security
