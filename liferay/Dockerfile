@@ -2,12 +2,14 @@ FROM liferay/dxp:7.3.10-ga1
 
 EXPOSE 8080 8000 11311
 
-ENV	LIFERAY_HOME /opt/liferay
+ENV LIFERAY_HOME /opt/liferay
 ENV TOMCAT_HOME $LIFERAY_HOME/tomcat
+
+USER root
 
 # Add Liferay license (with permissions to liferay user)
 COPY deploy/activation-key-digitalenterprisedevelopment-7.3-liferaycom.xml $LIFERAY_HOME/deploy
-RUN chown -R liferay:liferay $LIFERAY_HOME/deploy/activation-key-digitalenterprisedevelopment-7.3-liferaycom.xml
+RUN chown -R liferay:liferay $LIFERAY_HOME/deploy
 
 # Add OSGi configs (with permissions to liferay user)
 #COPY osgi/configs/* $LIFERAY_HOME/osgi/configs
