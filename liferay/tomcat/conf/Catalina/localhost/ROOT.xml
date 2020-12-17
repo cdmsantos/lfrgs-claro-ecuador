@@ -35,7 +35,7 @@
 		name="jdbc/LiferayPool"
 		auth="Container"
 		driverClass="oracle.jdbc.OracleDriver"
-	    jdbcUrl="jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.37.149)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=dxp.conecel.com)))"
+	    jdbcUrl="jdbc:oracle:thin:@//192.168.37.149:1521/dxp.conecel.com"
 		user="dxpliferay"
 		password="liferay"
 		initialPoolSize="10"
