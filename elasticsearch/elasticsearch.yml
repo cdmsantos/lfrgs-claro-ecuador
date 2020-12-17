@@ -24,6 +24,8 @@ cluster.name: LiferayElasticsearchCluster
 # Add custom attributes to the node:
 #
 node.name: elastic01
+
+discovery.type: single-node
 #
 # ----------------------------------- Paths ------------------------------------
 #
