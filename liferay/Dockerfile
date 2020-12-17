@@ -1,4 +1,4 @@
-FROM liferay/dxp:7.3.10-ga1
+FROM liferay/dxp:7.2.10-dxp-9
 
 EXPOSE 8080 8000 11311
 
