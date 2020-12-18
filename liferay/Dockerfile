@@ -23,6 +23,10 @@ COPY tomcat/lib/ext/* $TOMCAT_HOME/lib/ext/
 COPY properties/* $LIFERAY_HOME/
 RUN chown -R liferay:liferay $LIFERAY_HOME/*
 
+RUN mkdir /opt/liferay/data/document_library 
+
+RUN chown -R liferay:liferay $LIFERAY_HOME/*
+
 USER liferay
 
 WORKDIR $LIFERAY_HOME
