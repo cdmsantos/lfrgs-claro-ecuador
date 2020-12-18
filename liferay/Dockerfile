@@ -8,7 +8,7 @@ ENV TOMCAT_HOME $LIFERAY_HOME/tomcat
 USER root
 
 # Add Liferay license (with permissions to liferay user)
-COPY deploy/activation-key-digitalenterprisedevelopment-7.3-liferaycom.xml $LIFERAY_HOME/deploy
+COPY deploy/* $LIFERAY_HOME/deploy
 RUN chown -R liferay:liferay $LIFERAY_HOME/deploy
 
 # Add OSGi configs (with permissions to liferay user)
