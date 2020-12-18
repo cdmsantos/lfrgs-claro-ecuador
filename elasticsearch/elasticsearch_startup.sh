@@ -9,7 +9,8 @@ umask 0002
 register_license() {
   base_url="http://localhost:9200"
   until curl -s -o /dev/null --connect-timeout 3 "${base_url}"; do
-    :
+    echo "License register: Waiting for Elasticsearch start"
+    sleep 10
   done
   echo "Registering Elasticsearch license"
   curl \
