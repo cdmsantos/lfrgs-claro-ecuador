@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<license>
+	<account-name>Intranet Claro Ecuador</account-name>
+	<owner>Intranet Claro Ecuador</owner>
+	<description>Intranet Claro Ecuador</description>
+	<product-name>Digital Enterprise Non-Production</product-name>
+	<product-version>7.2</product-version>
+	<license-name>Digital Enterprise Non-Production</license-name>
+	<license-type>production</license-type>
+	<license-version>6</license-version>
+	<start-date>Wednesday, April 1, 2020 12:00:00 AM GMT</start-date>
+	<expiration-date>Friday, March 8, 2120 12:00:00 AM GMT</expiration-date>
+	<max-servers>1</max-servers>
+	<instance-size>Sizing 1</instance-size>
+	<host-names>
+		<host-name>dgdc-ocp-node01.dev.conecel.com</host-name>
+	</host-names>
+	<ip-addresses/>
+	<mac-addresses/>
+	<key>415576a8135a17966605478829f370f086b642529e734c7dc8568b666c78ad495b2a9cee6e949a8c0e69e53b06c812613136897d85f5ab4e14537e39931a52a5f41104d6c07db32e9946c84fcce06da48cf0494337e3db35130718b539c60310dc3b5bc3bf37edd25f0b2047d85abffeb5fe10aa9fd9b1a3033a238cf4218a6ee844d72e</key>
+</license>
