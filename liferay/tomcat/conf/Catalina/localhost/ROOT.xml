@@ -41,14 +41,14 @@
 		password="liferay"
 		initialPoolSize="10"
 		minPoolSize="10"
-		maxPoolSize="100"
+		maxPoolSize="10"
 		acquireIncrement="5"
 		maxIdleTime="43200"
 		maxIdleTimeExcessConnections="21600"
 		idleConnectionTestPeriod="600"
 		checkoutTimeout="10000"
 		testConnectionOnCheckout="true"
-		preferredTestQuery="select 1"
+		preferredTestQuery="select 1 from dual"
 		factory="org.apache.naming.factory.BeanFactory" 
 		type="com.mchange.v2.c3p0.ComboPooledDataSource" />
 </Context>
