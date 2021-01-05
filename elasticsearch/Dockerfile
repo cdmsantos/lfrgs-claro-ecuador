@@ -15,7 +15,6 @@ RUN chown -R elasticsearch:root /usr/share/elasticsearch/license.json
 COPY elasticsearch_startup.sh /usr/local/bin/elasticsearch_startup.sh
 RUN chmod +x /usr/local/bin/elasticsearch_startup.sh
 
-
 COPY jvm.options /usr/share/elasticsearch/config/
 RUN chown -R elasticsearch:root /usr/share/elasticsearch/config/jvm.options
 
