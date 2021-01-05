@@ -20,6 +20,12 @@ register_license() {
     -H "Content-Type: application/json" \
     -d @/usr/share/elasticsearch/license.json \
     "${base_url}/_license?acknowledge=true"
+
+    curl \
+      -X POST "localhost:9200/_security/user/elasticsearch/_password?pretty" \
+      -H 'Content-Type: application/json' \
+      -d '{"password" : "Claro$2o2o"}'
+
 }
 register_license &
 
