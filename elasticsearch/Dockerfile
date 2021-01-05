@@ -21,5 +21,7 @@ RUN chown -R elasticsearch:root /usr/share/elasticsearch/config/jvm.options
 COPY limits.conf /etc/security
 RUN chown -R elasticsearch:root /etc/security/limits.conf
 
+EXPOSE 9200 9300
+
 CMD ["elasticsearch_startup.sh"]
 
