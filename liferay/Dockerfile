@@ -14,7 +14,7 @@ COPY license/* $LIFERAY_HOME/osgi/modules
 COPY deploy/* $LIFERAY_HOME/deploy
 
 # Add OSGi configs (with permissions to liferay user)
-COPY osgi/configs/* $LIFERAY_HOME/osgi/configs
+COPY osgi/configs/* $LIFERAY_HOME/osgi/configs/
 
 # Configure database conection (with permissions to liferay user)
 COPY tomcat/conf/Catalina/localhost/* $TOMCAT_HOME/conf/Catalina/localhost/
