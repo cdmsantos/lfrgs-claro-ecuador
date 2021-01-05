@@ -41,4 +41,5 @@ discovery.type: single-node
 #
 # Set the bind address to a specific IP (IPv4 or IPv6):
 #
-network.host: elasticsearch-claro-edx-dxp.openshift-apps.dev.conecel.com
+network.host: 0.0.0.0
+network.publish_host: elastic01
