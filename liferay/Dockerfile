@@ -11,7 +11,7 @@ USER root
 COPY license/* $LIFERAY_HOME/osgi/modules
 
 # Add Liferay ES Connector
-COPY deploy/* $LIFERAY_HOME/deploy
+COPY deploy/* $LIFERAY_HOME/osgi/marketplace
 
 # Add OSGi configs (with permissions to liferay user)
 COPY osgi/configs/* $LIFERAY_HOME/osgi/configs/
