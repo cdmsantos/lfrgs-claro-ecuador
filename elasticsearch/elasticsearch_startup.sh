@@ -21,7 +21,7 @@ register_license() {
   curl \
     -fsSL \
     -X PUT \
-    -u elastic:Claro$2o2o \
+    -u elastic:elastic \
     -H "Content-Type: application/json" \
     -d @/usr/share/elasticsearch/license.json \
     "${base_url}/_license?acknowledge=true"
