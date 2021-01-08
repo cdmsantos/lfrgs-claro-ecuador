@@ -22,7 +22,7 @@ register_license() {
     "${base_url}/_license?acknowledge=true"
 
     echo "Configuring Elasticsearch password"
-    #echo -e "y\nelastic\nelastic\nelastic\nelastic\nelastic\nelastic\nelastic\nelastic\nelastic\nelastic\nelastic\nelastic" | ./bin/elasticsearch-keystore interactive 
+    echo -e "y\nelastic\nelastic\nelastic\nelastic\nelastic\nelastic\nelastic\nelastic\nelastic\nelastic\nelastic\nelastic" | ./bin/elasticsearch-keystore interactive 
 }
 register_license &
 
