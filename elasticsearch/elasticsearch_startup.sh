@@ -25,8 +25,6 @@ register_license() {
     -H "Content-Type: application/json" \
     -d @/usr/share/elasticsearch/license.json \
     "${base_url}/_license?acknowledge=true"
-
-  
 }
 register_license &
 
