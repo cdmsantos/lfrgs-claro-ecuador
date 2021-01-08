@@ -23,7 +23,7 @@ register_license() {
 
     echo "Configuring Elasticsearch password"
     cd /usr/share/elasticsearch
-    echo -e "y\nelastic\nelastic\nelastic\nelastic\nelastic\nelastic\nelastic\nelastic\nelastic\nelastic\nelastic\nelastic" | ./bin/elasticsearch-setup-passwords interactive
+    echo -e "y\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o" | ./bin/elasticsearch-setup-passwords interactive
 }
 register_license &
 
