@@ -7,25 +7,25 @@ ENV TOMCAT_HOME $LIFERAY_HOME/tomcat
 
 USER root
 
-# Add Liferay license (with permissions to liferay user)
+# Add Liferay license
 COPY license/* $LIFERAY_HOME/osgi/modules
 
 # Add Liferay ES Connector
 COPY deploy/* $LIFERAY_HOME/osgi/marketplace
 
-# Add OSGi configs (with permissions to liferay user)
+# Add OSGi configs 
 COPY osgi/configs/* $LIFERAY_HOME/osgi/configs/
 
 # Configure database conection (with permissions to liferay user)
 COPY tomcat/conf/Catalina/localhost/* $TOMCAT_HOME/conf/Catalina/localhost/
 
-# Add database libs (mysql and oracle) (with permissions to liferay user)
+# Add database libs
 COPY tomcat/lib/ext/* $TOMCAT_HOME/lib/ext/
 
-# Configure Liferay (with permissions to liferay user)
+# Configure Liferay
 COPY properties/* $LIFERAY_HOME/
-RUN chown -R liferay:liferay $LIFERAY_HOME/*
 
+# Give permission to all files to liferay user 
 RUN chown -R liferay:liferay $LIFERAY_HOME/*
 
 USER liferay
