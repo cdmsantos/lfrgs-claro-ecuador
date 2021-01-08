@@ -13,10 +13,9 @@ register_license() {
     sleep 10
   done
 
-
-sleep 30
+  sleep 30
   echo "Configuring Elasticsearch password"
-  echo -e "y\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o" | ./usr/share/elasticsearch/bin/elasticsearch-setup-passwords interactive
+  echo -e "y\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o" | sh /usr/share/elasticsearch/bin/elasticsearch-setup-passwords interactive
 
   echo "Registering Elasticsearch license"
   curl \
