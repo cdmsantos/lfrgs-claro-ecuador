@@ -12,18 +12,21 @@ register_license() {
     echo "License register: Waiting for Elasticsearch start"
     sleep 10
   done
+
+  echo "Configuring Elasticsearch password"
+  cd /usr/share/elasticsearch/
+  echo -e "y\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o" | ./bin/elasticsearch-setup-passwords interactive
+
   echo "Registering Elasticsearch license"
   curl \
     -fsSL \
     -X PUT \
-    -u name:password \
+    -u elastic:Claro$2o2o \
     -H "Content-Type: application/json" \
     -d @/usr/share/elasticsearch/license.json \
     "${base_url}/_license?acknowledge=true"
 
-  echo "Configuring Elasticsearch password"
-  #cd /usr/share/elasticsearch/
-  #echo -e "y\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o" | ./bin/elasticsearch-setup-passwords interactive
+  
 }
 register_license &
 
