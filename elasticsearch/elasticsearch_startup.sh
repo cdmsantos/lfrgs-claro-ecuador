@@ -21,9 +21,9 @@ register_license() {
     -d @/usr/share/elasticsearch/license.json \
     "${base_url}/_license?acknowledge=true"
 
-    echo "Configuring Elasticsearch password"
-    cd /usr/share/elasticsearch
-    echo -e "y\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o" | ./bin/elasticsearch-setup-passwords interactive
+  echo "Configuring Elasticsearch password"
+  #cd /usr/share/elasticsearch/
+  #echo -e "y\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o\nClaro$2o2o" | ./bin/elasticsearch-setup-passwords interactive
 }
 register_license &
 
